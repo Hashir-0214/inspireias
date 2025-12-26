@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, MapPin, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +30,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="relative w-full bg-white text-xs py-2 hidden md:block border-b border-white/5 z-50">
+            <div className="relative w-full bg-gray-300 text-xs py-2 hidden md:block border-b border-white/5 z-50">
                 <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
                     {/* Left section */}
@@ -66,18 +67,13 @@ const Header = () => {
 
                 <header
                     className={`relative z-10 w-[95%] max-w-6xl flex items-center justify-between px-6 py-3 transition-all duration-300 rounded-full border ${isScrolled
-                        ? "bg-slate-900/90 backdrop-blur-md shadow-xl border-white/10"
-                        : "bg-slate-900 shadow-2xl border-white/10"
+                        ? "bg-background/80 backdrop-blur-md shadow-xl border-white/10"
+                        : "bg-background shadow-2xl border-white/10"
                         }`}
                 >
                     {/* Logo Section */}
                     <Link href="/" className="flex flex-col group leading-none">
-                        <h1 className="text-2xl font-serif font-bold text-white tracking-tight group-hover:text-blue-400 transition-colors">
-                            INSPIRO<span className="text-blue-500">.</span>
-                        </h1>
-                        <span className="text-[0.6rem] font-medium tracking-widest text-slate-400 uppercase group-hover:text-slate-300 transition-colors">
-                            IAS Academy
-                        </span>
+                        <img src="/logo.png" alt="INSPIRO Logo" className="h-8 w-auto" />
                     </Link>
 
                     {/* Desktop Navigation */}

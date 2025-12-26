@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, ArrowRight, Star } from "lucide-react";
+import { CheckCircle2, ArrowRight, Star, Brain, Activity, Users, Scale } from "lucide-react";
 
 const Hero = () => {
     const containerVariants = {
@@ -24,7 +24,7 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative w-full min-h-[90vh] bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 flex items-center pt-8 pb-12 overflow-hidden">
+        <section className="relative w-full min-h-[90vh] bg-background flex items-center pt-8 pb-12 overflow-hidden">
 
             {/* --- Background Decorative Elements --- */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -32,60 +32,51 @@ const Hero = () => {
                 <div className="absolute bottom-[10%] right-[5%] w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[80px]" />
             </div>
 
-            <div className="container  max-w-7xl mx-auto px-6 relative z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="container max-w-7xl mx-auto px-6 relative z-10">
+                {/* FIX: Changed grid to flex/centered layout because the 
+                    right column (form) is currently commented out. 
+                    If you uncomment the form later, revert to: 
+                    'grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center' 
+                */}
+                <div className="flex flex-col items-center text-center justify-center gap-12">
 
-                    {/* --- Left Column: Content --- */}
+                    {/* --- Left Column: Content (Now Centered) --- */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="text-white space-y-6 max-w-xl"
+                        className="text-white space-y-6 max-w-2xl mx-auto"
                     >
                         {/* Trust Badge */}
-                        <motion.div variants={itemVariants} className="inline-flex font-nunito items-center gap-2 px-3 py-1 rounded-full bg-blue-900/50 border border-blue-700/50 text-blue-200 text-xs font-semibold tracking-wide uppercase">
-                            <Star size={12} className="text-yellow-400 fill-yellow-400" />
-                            An Initiative of Cochin Business Club
+                        <motion.div
+                            variants={itemVariants}
+                            className="inline-flex items-center gap-2 px-3.5 py-[6px] rounded-full bg-background/80 border border-foreground/20 text-foreground/80 text-[11px] font-semibold tracking-wider uppercase backdrop-blur-sm"
+                        >
+                            <Star size={12} className="text-yellow-400 fill-yellow-400 translate-y-[0.5px]" />
+                            <span className="leading-none">
+                                An Initiative of Cochin Business Club
+                            </span>
                         </motion.div>
+
 
                         {/* Headline */}
                         <motion.div variants={itemVariants}>
-                            <h1 className="text-2xl lg:text-4xl font-sans font-bold uppercase leading-tight">
+                            <h1 className="text-3xl lg:text-5xl font-sans font-bold uppercase leading-tight">
                                 School Level <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                                <span className="text-transparent bg-clip-text bg-foreground">
                                     Civil Service
-                                </span>{" "}
+                                </span>{" "}<br />
                                 Orientation
                             </h1>
-                            <p className="mt-4 text-md text-slate-300 font-light max-w-lg">
-                                Homegrown with skills!  <br />Just what every aspirant needs <br />
+                            {/* FIX: 'text-md' is not a valid class, changed to 'text-lg' */}
+                            <p className="mt-4 text-lg text-slate-300 font-light max-w-lg mx-auto">
+                                Homegrown with skills! <br />Just what every aspirant needs to <br />
                                 master <strong className="text-white font-medium"> 21st Century Competencies</strong>
-                            </p>
-                        </motion.div>
-
-                        {/* Key Features List */}
-                        <motion.ul variants={itemVariants} className="space-y-4 pt-2">
-                            {[
-                                "20 Purposeful Rounds of Training",
-                                "Activity-Based Learning Approach",
-                                "Mentorship by Civil Service Experts",
-                                "Focus on Critical Thinking & Ethics"
-                            ].map((item, index) => (
-                                <li key={index} className="flex items-start gap-3">
-                                    <CheckCircle2 className="text-blue-500 shrink-0 mt-1" size={20} />
-                                    <span className="text-slate-200 text-sm md:text-base">{item}</span>
-                                </li>
-                            ))}
-                        </motion.ul>
-
-                        {/* Quote / Credibility */}
-                        <motion.div variants={itemVariants} className="pt-6 border-t border-slate-800">
-                            <p className="italic text-slate-400 text-sm">
-                                "A benchmark for excellence where students and mentors share a passion for learning."
                             </p>
                         </motion.div>
                     </motion.div>
 
+                   
                     {/*
                     --- Right Column: Registration Form ---
                     <motion.div
@@ -174,6 +165,62 @@ const Hero = () => {
 
                    */}
                 </div>
+
+                {/* --- Key Features Cards Section --- */}
+                <motion.div
+                    initial={{ y: 30, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.7, delay: 0.6 }}
+                    className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                >
+                    {[
+                        {
+                            title: "20 Purposeful Rounds",
+                            icon: <Brain /> // FIX: Replaced broken unicode with Lucide Icon
+                        },
+                        {
+                            title: "Activity-Based Learning",
+                            icon: <Activity /> // FIX: Replaced broken unicode with Lucide Icon
+                        },
+                        {
+                            title: "Expert Mentorship",
+                            icon: <Users /> // FIX: Replaced broken unicode with Lucide Icon
+                        },
+                        {
+                            title: "Critical Thinking & Ethics",
+                            icon: <Scale /> // FIX: Replaced broken unicode with Lucide Icon
+                        }
+                    ].map((feature, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+                            whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                            // FIX: Added 'items-center' for proper vertical alignment of icon and text
+                            className="group flex items-center gap-5 relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 hover:border-background/50 transition-all duration-300 text-left"
+                        >
+                            {/* Icon */}
+                            <div className="text-2xl transform group-hover:scale-110 transition-transform duration-300 text-white/80">
+                                {feature.icon}
+                            </div>
+
+                            {/* Title */}
+                            <h3 className="text-md font-bold text-gray-200 group-hover:text-foreground transition-colors">
+                                {feature.title}
+                            </h3>
+
+                            {/* Decorative corner accent */}
+                            <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-background/80 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        </motion.div>
+                    ))}
+                </motion.div>
+
+                <motion.div variants={itemVariants} className="w-full pt-8 text-center">
+                    <p className="italic text-slate-400 text-sm mx-auto">
+                        "A benchmark for excellence where students and mentors share a passion for learning."
+                    </p>
+                </motion.div>
             </div>
         </section >
     );
