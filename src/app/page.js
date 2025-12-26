@@ -18,7 +18,6 @@ export default function Home() {
       <Mentors />
       <MediaPresence />
       <Courses />
-      <Gallery />
     </div>
   );
 }

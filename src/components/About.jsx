@@ -95,11 +95,11 @@ const About = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold uppercase tracking-wide mb-4">
+                    <span className="inline-block px-4 py-1 rounded-full bg-background text-white text-sm font-bold uppercase tracking-wide mb-4">
                         About Us
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                        Welcome to <span className="text-blue-600">Inspiro IAS Academy</span>
+                        Welcome to <span className="text-background">Inspiro IAS Academy</span>
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full" />
                 </motion.div>
@@ -131,10 +131,10 @@ const About = () => {
                         {/* Feature Highlights */}
                         <div className="grid grid-cols-2 gap-4 mt-8">
                             {[
-                                { icon: Award, label: "Excellence Focused", color: "text-blue-600" },
-                                { icon: Target, label: "Goal Oriented", color: "text-cyan-600" },
-                                { icon: Users, label: "Expert Mentors", color: "text-indigo-600" },
-                                { icon: BookOpen, label: "Activity Based", color: "text-purple-600" }
+                                { icon: Award, label: "Excellence Focused", color: "text-red-600" },
+                                { icon: Target, label: "Goal Oriented", color: "text-red-600" },
+                                { icon: Users, label: "Expert Mentors", color: "text-red-600" },
+                                { icon: BookOpen, label: "Activity Based", color: "text-red-600" }
                             ].map((item, index) => (
                                 <motion.div
                                     key={index}
@@ -219,9 +219,9 @@ const About = () => {
                     ].map((stat, index) => (
                         <div
                             key={index}
-                            className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-100"
+                            className="text-center p-6 bg-white rounded-2xl border-2 border-background"
                         >
-                            <h3 className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</h3>
+                            <h3 className="text-4xl font-bold text-background mb-2">{stat.number}</h3>
                             <p className="text-lg font-semibold text-slate-800">{stat.label}</p>
                             <p className="text-sm text-slate-600 mt-1">{stat.sublabel}</p>
                         </div>
