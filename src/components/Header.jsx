@@ -67,7 +67,7 @@ const Header = () => {
 
                 <header
                     className={`relative z-10 w-[95%] max-w-6xl flex items-center justify-between px-6 py-3 transition-all duration-300 rounded-full border ${isScrolled
-                        ? "bg-background/80 backdrop-blur-md shadow-xl border-white/10"
+                        ? "bg-background backdrop-blur-md shadow-xl border-white/10"
                         : "bg-background shadow-2xl border-white/10"
                         }`}
                 >
@@ -86,7 +86,7 @@ const Header = () => {
                             >
                                 {link.name}
                                 {/* Dot Indicator for Hover */}
-                                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </Link>
                         ))}
                     </nav>
@@ -96,7 +96,7 @@ const Header = () => {
                         {/* CTA Button */}
                         <Link
                             href="#register"
-                            className="hidden md:block px-6 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-blue-500 hover:shadow-blue-500/30 transition-all transform hover:-translate-y-0.5"
+                            className="hidden md:block px-6 py-2.5 bg-white text-background text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-foreground hover:shadow-background/30 transition-all transform hover:-translate-y-0.5"
                         >
                             Enroll Now
                         </Link>

@@ -17,7 +17,7 @@ const Footer = () => {
         <footer className="bg-slate-950 text-slate-300 border-t border-slate-900 font-sans">
             {/* --- Top Section: Main Content --- */}
             <div className="container mx-auto px-6 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 
                     {/* Column 1: Brand & Initiative */}
                     <div className="space-y-6">
@@ -63,32 +63,6 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Our Programs */}
-                    <div>
-                        <h3 className="text-white font-semibold text-lg mb-6 relative inline-block">
-                            Programs
-                            <span className="absolute -bottom-2 left-0 w-12 h-1 bg-blue-600 rounded-full"></span>
-                        </h3>
-                        <ul className="space-y-4 text-sm">
-                            <li className="group cursor-pointer">
-                                <span className="block text-white font-medium group-hover:text-blue-400 transition-colors">
-                                    Level 01: Foundation
-                                </span>
-                                <span className="text-xs text-slate-500 block mt-1">
-                                    For Classes 5, 6, & 7 [cite: 21]
-                                </span>
-                            </li>
-                            <li className="group cursor-pointer">
-                                <span className="block text-white font-medium group-hover:text-blue-400 transition-colors">
-                                    Level 02: Advanced
-                                </span>
-                                <span className="text-xs text-slate-500 block mt-1">
-                                    For Classes 8, 9, & 10 [cite: 24]
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-
                     {/* Column 4: Contact Info */}
                     <div>
                         <h3 className="text-white font-semibold text-lg mb-6 relative inline-block">
@@ -101,7 +75,7 @@ const Footer = () => {
                                 <span>
                                     OS 3 GCDA Complex,<br />
                                     Marine Drive, Cochin,<br />
-                                    Ernakulam [cite: 2]
+                                    Ernakulam
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
@@ -134,16 +108,40 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* --- Bottom Bar: Copyright --- */}
-            <div className="bg-slate-950 border-t border-slate-900 py-6">
-                <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-600">
-                    <p>&copy; {currentYear} Inspiro IAS Academy. All Rights Reserved.</p>
-                    <div className="flex gap-6">
-                        <a href="#" className="hover:text-slate-400 transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-slate-400 transition-colors">Terms of Service</a>
+            {/* --- Footer Bottom Bar --- */}
+            <footer className="w-full bg-slate-950 border-t border-slate-900">
+                <div className="container mx-auto px-6 py-6 flex flex-col gap-4 text-xs text-slate-600">
+
+                    {/* Top Row */}
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p className="text-center md:text-left">
+                            © {currentYear} Inspiro IAS Academy. All Rights Reserved.
+                        </p>
+
+                        <div className="flex gap-6">
+                            <a
+                                href="/privacy-policy"
+                                className="hover:text-slate-400 transition-colors"
+                            >
+                                Privacy Policy
+                            </a>
+                            <a
+                                href="/terms"
+                                className="hover:text-slate-400 transition-colors"
+                            >
+                                Terms of Service
+                            </a>
+                        </div>
                     </div>
+
+                    {/* Bottom Row */}
+                    <p className="text-center text-[11px] text-slate-500">
+                        Developed by <span className="font-medium text-slate-400">Hashir Kalathil</span>
+                    </p>
+
                 </div>
-            </div>
+            </footer>
+
         </footer>
     );
 };
