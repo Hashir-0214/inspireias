@@ -8,6 +8,7 @@ import Hero from "@/components/Hero";
 import MediaPresence from "@/components/MediaPresence";
 import Mentors from "@/components/Mentors";
 import OurProcess from "@/components/OurProcess";
+import CenturySkills from "@/components/Skills";
 import WhyStartEarly from "@/components/WhyStartEarly";
 import Image from "next/image";
 
@@ -17,13 +18,13 @@ export default function Home() {
       <Hero />
       <About />
       <OurProcess />
+      <Courses />
       <ActivityLearning />
       <FeelTheChange />
       <Features />
-      {/* <WhyStartEarly />
-      <Mentors />/ */}
+      <CenturySkills />
+      {/* <Mentors /> */}
       <MediaPresence />
-      <Courses />
     </div>
   );
 }

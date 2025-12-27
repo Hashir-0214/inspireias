@@ -60,7 +60,7 @@ const Header = () => {
 
             {/* --- Floating "Pill" Navbar --- */}
             <div
-                className={`fixed left-0 right-0 z-40 flex justify-center transition-all duration-500 ease-in-out ${isScrolled ? "top-2" : "top-2 md:top-9"
+                className={`fixed left-0 right-0 z-40 flex justify-center transition-all duration-500 ease-in-out ${isScrolled ? "top-2" : "top-6 md:top-20"
                     }`}
             >
 
