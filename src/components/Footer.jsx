@@ -34,7 +34,7 @@ const Footer = () => {
                                 An Initiative Of
                             </p>
                             <p className="text-sm text-white">
-                                Cochin Business Club & <br /> Cochin Connect
+                                Cochin Business Club 
                             </p>
                         </div>
                     </div>
