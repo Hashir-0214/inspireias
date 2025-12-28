@@ -165,7 +165,7 @@ const About = () => {
                             {/* Main Large Image */}
                             <div className="col-span-2 h-80 row-span-2 relative rounded-2xl overflow-hidden shadow-xl group">
                                 <Image
-                                    src="/assets/school_boys.png"
+                                    src="/assets/School_boys.png"
                                     alt="Students learning"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                     width={400}
