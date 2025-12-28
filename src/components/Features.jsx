@@ -11,7 +11,9 @@ const KeyFeatures = () => {
             description: "Designed to enrich and go beyond the traditional school curriculum",
             gradient: "from-[#6c1329] to-[#8b1a36]",
             number: "01",
-            color: "#e91e63"
+            color: "#e3b675",
+            tcolor: "group-hover:text-slate-900",
+            ccolor: "group-hover:text-slate-600"
         },
         {
             icon: "/assets/icons/pencil.png",
@@ -19,7 +21,9 @@ const KeyFeatures = () => {
             description: "Hands-on learning approach to build essential skills",
             gradient: "from-[#e3b675] to-[#d4a562]",
             number: "02",
-            color: "#ff9800"
+            color: "#6c1329",
+            tcolor: "group-hover:text-white",
+            ccolor: "group-hover:text-slate-200"
         },
         {
             icon: "/assets/icons/folder.png",
@@ -27,7 +31,9 @@ const KeyFeatures = () => {
             description: "Thoughtfully structured course for holistic development",
             gradient: "from-[#6c1329] to-[#8b1a36]",
             number: "03",
-            color: "#9c27b0"
+            color: "#e3b675",
+            tcolor: "group-hover:text-slate-900",
+            ccolor: "group-hover:text-slate-600"
         },
         {
             icon: "/assets/icons/trophy.png",
@@ -35,7 +41,9 @@ const KeyFeatures = () => {
             description: "Activities that strengthen confidence, communication & leadership",
             gradient: "from-[#e3b675] to-[#d4a562]",
             number: "04",
-            color: "#e91e63"
+            color: "#6c1329",
+            tcolor: "group-hover:text-white",
+            ccolor: "group-hover:text-slate-200"
         },
         {
             icon: "/assets/icons/open-book.png",
@@ -43,7 +51,9 @@ const KeyFeatures = () => {
             description: "Emphasis on critical thinking, awareness, and personality building",
             gradient: "from-[#6c1329] to-[#8b1a36]",
             number: "05",
-            color: "#ff9800"
+            color: "#e3b675",
+            tcolor: "group-hover:text-slate-900",
+            ccolor: "group-hover:text-slate-600"
         },
         {
             icon: "/assets/icons/progress.png",
@@ -51,7 +61,9 @@ const KeyFeatures = () => {
             description: "Regular evaluations to track progress and ensure improvement",
             gradient: "from-[#e3b675] to-[#d4a562]",
             number: "06",
-            color: "#9c27b0"
+            color: "#6c1329",
+            tcolor: "group-hover:text-white",
+            ccolor: "group-hover:text-slate-200"
         }
     ];
 
@@ -95,7 +107,7 @@ const KeyFeatures = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-3">
-                        Our <span className="text-[#e91e63]">Features</span>
+                        Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6c1329] to-[#e3b675]">Features</span>
                     </h2>
                     <p className="text-slate-600 text-base">
                         Groom your child beyond the school for the new age
@@ -114,7 +126,7 @@ const KeyFeatures = () => {
                             className="group relative"
                         >
                             {/* Card with wavy pattern background */}
-                            <div className="relative h-full bg-gradient-to-br from-pink-50 via-purple-50 to-pink-50 rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+                            <div className="relative h-full bg-gradient-to-r from-[#6c1329]/10 to-[#e3b675]/10 rounded-3xl p-8 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
 
                                 {/* Wavy pattern overlay */}
                                 <div className="absolute inset-0 opacity-30" style={{
@@ -151,10 +163,10 @@ const KeyFeatures = () => {
                                         style={{ backgroundColor: feature.color }}
                                     />
                                     <div className="relative">
-                                        <h3 className="text-lg font-bold text-slate-900 mb-3">
+                                        <h3 className={`text-lg font-bold text-slate-900 ${feature.tcolor} mb-3 transition-all duration-300`}>
                                             {feature.title}
                                         </h3>
-                                        <p className="text-slate-600 text-sm leading-relaxed">
+                                        <p className={`text-slate-600 ${feature.ccolor} text-sm leading-relaxed transition-all duration-300`}>
                                             {feature.description}
                                         </p>
                                     </div>

@@ -49,7 +49,7 @@ const About = () => {
                     animation-delay: 0.5s;
                 }
             `}</style>
-            
+
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-100/40 rounded-full blur-[120px]" />
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan-100/30 rounded-full blur-[100px]" />
@@ -60,19 +60,19 @@ const About = () => {
                     ✏️
                 </div>
             </div>
-            
+
             <div className="absolute right-16 top-[40%] animate-float-delayed">
                 <div className="text-5xl transform -rotate-12 hover:rotate-12 transition-transform duration-500">
                     📚
                 </div>
             </div>
-            
+
             <div className="absolute right-4 bottom-32 animate-float-slow">
                 <div className="text-5xl transform rotate-6 hover:-rotate-12 transition-transform duration-500">
                     🎓
                 </div>
             </div>
-            
+
             <div className="absolute right-20 bottom-[15%] animate-float">
                 <div className="text-4xl transform -rotate-6 hover:rotate-6 transition-transform duration-500">
                     📝
@@ -86,7 +86,7 @@ const About = () => {
             </div>
 
             <div className="container max-w-7xl mx-auto px-6 relative z-10">
-                
+
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -95,17 +95,19 @@ const About = () => {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <span className="inline-block px-4 py-1 rounded-full bg-background text-white text-sm font-bold uppercase tracking-wide mb-4">
-                        About Us
-                    </span>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#6c1329]/10 to-[#e3b675]/10 border border-[#e3b675]/30 mb-4">
+                        <span className="text-[#6c1329] text-sm font-semibold uppercase tracking-wide">
+                            About Us
+                        </span>
+                    </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
                         Welcome to <span className="text-background">Inspiro IAS Academy</span>
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full" />
+                    <div className="w-24 h-1 bg-gradient-to-r from-[#6c1329] to-[#e3b675] mx-auto rounded-full mt-4" />
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    
+
                     {/* Left Column: Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -118,11 +120,11 @@ const About = () => {
                             <p className="text-slate-700 leading-relaxed">
                                 Inspiro IAS Academy is a modern educational initiative dedicated to shaping aspirants through intellectual, cultural, and skill-based development. Our new-age civil service orientation model aims to become a benchmark for excellence—where both students and mentors share a passion for learning and purposeful growth.
                             </p>
-                            
+
                             <p className="text-slate-700 leading-relaxed mt-4">
                                 This program is designed to mould aspirants into responsible, aware, and multi-dimensional individuals by instilling a blend of cultural understanding, analytical thinking, empathy, and constructive attitude.
                             </p>
-                            
+
                             <p className="text-slate-700 leading-relaxed mt-4">
                                 At Inspiro, training is structured into <strong className="text-slate-900">20 purposeful rounds</strong>, each lasting <strong className="text-slate-900">3 hours</strong>. Each round focuses on a core skill area and emphasizes activity-based learning. The content and flow of these rounds are thoughtfully crafted to ensure deep engagement and meaningful transformation.
                             </p>
@@ -187,7 +189,7 @@ const About = () => {
 
                             {/* Small Image 2 */}
                             <div className="relative rounded-2xl overflow-hidden shadow-lg group">
-                                 <Image
+                                <Image
                                     src="/assets/students.png"
                                     alt="Achievement"
                                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
@@ -205,7 +207,7 @@ const About = () => {
                 </div>
 
                 {/* Bottom Stats or CTA Section */}
-                <motion.div
+                {/* <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -226,7 +228,7 @@ const About = () => {
                             <p className="text-sm text-slate-600 mt-1">{stat.sublabel}</p>
                         </div>
                     ))}
-                </motion.div>
+                </motion.div> */}
 
             </div>
         </section>

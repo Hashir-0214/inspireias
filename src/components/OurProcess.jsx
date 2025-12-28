@@ -103,14 +103,6 @@ const OurProcess = () => {
                 {/* Process Steps Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
                     
-                    {/* Connection Lines (Hidden on Mobile) */}
-                    <div className="hidden lg:block absolute top-0 left-0 w-full h-full pointer-events-none">
-                        <svg className="w-full h-full" style={{ position: 'absolute' }}>
-                            {/* Connecting dotted lines between cards */}
-                            <line x1="33%" y1="25%" x2="66%" y2="25%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="5,5" />
-                            <line x1="66%" y1="58%" x2="33%" y2="58%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="5,5" />
-                        </svg>
-                    </div>
 
                     {processes.map((process, index) => (
                         <motion.div
