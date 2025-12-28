@@ -168,7 +168,7 @@ const About = () => {
                                     src="/assets/school_boys.png"
                                     alt="Students learning"
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                    width={600}
+                                    width={400}
                                     height={400}
                                 />
                                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg z-20">
