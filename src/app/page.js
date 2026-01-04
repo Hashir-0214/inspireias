@@ -5,6 +5,7 @@ import Features from "@/components/Features";
 import FeelTheChange from "@/components/FeelTheChange";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
+import KeyFeatures from "@/components/KeyFeatures";
 import MediaPresence from "@/components/MediaPresence";
 import Mentors from "@/components/Mentors";
 import OurProcess from "@/components/OurProcess";
@@ -16,7 +17,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <About />
+      <KeyFeatures />
       <OurProcess />
       <Courses />
       <ActivityLearning />

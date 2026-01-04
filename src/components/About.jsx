@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <section className="relative w-full py-20 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+        <section className="relative w-full py-40 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
             <style jsx>{`
                 @keyframes float {
                     0%, 100% {
