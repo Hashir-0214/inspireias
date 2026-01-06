@@ -23,9 +23,9 @@ const Header = () => {
     const navLinks = [
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
-        { name: "Our Process", href: "#process" },
-        { name: "Levels", href: "#levels" },
-        { name: "Contact", href: "#contact" },
+        { name: "Our Process", href: "/#process" },
+        { name: "Levels", href: "/#levels" },
+        { name: "Contact", href: "/#contact" },
     ];
 
     return (
@@ -72,7 +72,7 @@ const Header = () => {
                         }`}
                 >
                     {/* Logo Section */}
-                    <Link href="/" className="flex flex-col group leading-none">
+                    <Link href="/" className="flex flex-col group leading-none ml-6">
                         <img src="/logo.png" alt="INSPIRO Logo" className="h-8 w-auto" />
                     </Link>
 
@@ -92,7 +92,7 @@ const Header = () => {
                     </nav>
 
                     {/* Right Side: CTA & Mobile Toggle */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 opacity-0 pointer-events-none">
                         {/* CTA Button */}
                         <Link
                             href="#register"

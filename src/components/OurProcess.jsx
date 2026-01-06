@@ -62,7 +62,7 @@ const OurProcess = () => {
     ];
 
     return (
-        <section className="relative w-full py-20 bg-white overflow-hidden">
+        <section className="relative w-full py-20 bg-white overflow-hidden" id="process">
             
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">

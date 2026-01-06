@@ -15,7 +15,7 @@ export default function KeyFeatures() {
     };
 
     return (
-        <section className="relative w-full bg-gradient-to-br from-[#681028] via-[#52091c] to-[#3a0412] flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden px-6">
+        <section className="relative w-full bg-white flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden px-6">
 
             {/* Grid Section */}
             <motion.div
@@ -48,7 +48,7 @@ export default function KeyFeatures() {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                         whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                        className="group flex items-center gap-5 relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-white/10 hover:border-[#deb971]/30 transition-all duration-300 text-left"
+                        className="group flex items-center gap-5 relative bg-[#681028] backdrop-blur-sm border border-[#681028] rounded-xl p-4 hover:bg-[#3a0412] hover:border-[#3a0412]/30 transition-all duration-300 text-left"
                     >
                         {/* Icon */}
                         <div className="text-2xl transform group-hover:scale-110 transition-transform duration-300 text-[#deb971] opacity-90">
@@ -73,7 +73,7 @@ export default function KeyFeatures() {
                 animate="visible"
                 className="w-full pt-16 text-center"
             >
-                <p className="italic text-slate-300/60 text-sm md:text-base mx-auto font-light tracking-wide">
+                <p className="italic text-slate-900 text-sm md:text-base mx-auto tracking-wide">
                     "A benchmark for excellence where students and mentors share a passion for learning."
                 </p>
             </motion.div>

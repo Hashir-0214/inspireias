@@ -41,7 +41,7 @@ const Hero = () => {
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
-                        className="text-white space-y-8 max-w-2xl text-center lg:text-center mx-auto lg:mx-0 flex-1"
+                        className="text-white space-y-8 max-w-2xl text-center lg:text-left mx-auto lg:mx-0 flex-1"
                     >
                         {/* Trust Badge */}
                         <motion.div
@@ -57,14 +57,14 @@ const Hero = () => {
                         {/* Headline */}
                         <motion.div variants={itemVariants}>
                             <h1 className="text-3xl lg:text-5xl font-sans font-bold uppercase leading-tight">
-                                School Level <br />
+                                Junior Level <br />
                                 <span className="text-transparent bg-clip-text bg-foreground">
                                     Civil Service
                                 </span>{" "}<br />
                                 Orientation
                             </h1>
                             {/* FIX: 'text-md' is not a valid class, changed to 'text-lg' */}
-                            <p className="mt-4 text-lg text-slate-300 font-light max-w-lg mx-auto">
+                            <p className="mt-4 text-lg text-slate-300 font-light max-w-lg">
                                 Homegrown with skills! <br />Just what every aspirant needs to <br />
                                 master <strong className="text-white font-medium"> 21st Century Competencies</strong>
                             </p>
@@ -77,10 +77,11 @@ const Hero = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                     // Mobile: Relative/Stacked | Desktop: Absolute Bottom Right
-                    className="relative w-full flex justify-center lg:absolute lg:bottom-0 lg:right-0 lg:w-auto lg:h-[85%] z-10 pointer-events-none"
+                    className="relative w-full flex justify-center lg:absolute lg:bottom-0 lg:right-0 lg:w-auto lg:h-[100%] z-10 pointer-events-none"
                 >
                     {/* Glow behind student */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[300px] lg:h-[300px] bg-[#80162f] rounded-full blur-3xl -z-10" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] bg-[#7c1430] rounded-full -z-10" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] bg-[#3a0412] rounded-full -z-11" />
 
                     {/* Image Container */}
                     <div className="relative w-[320px] h-[380px] lg:w-[500px] lg:h-[650px]">
