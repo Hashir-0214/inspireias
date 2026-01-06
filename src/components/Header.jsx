@@ -92,11 +92,11 @@ const Header = () => {
                     </nav>
 
                     {/* Right Side: CTA & Mobile Toggle */}
-                    <div className="flex items-center gap-4 opacity-0 pointer-events-none">
+                    <div className="flex items-center gap-4 pointer-events-none">
                         {/* CTA Button */}
                         <Link
                             href="#register"
-                            className="hidden md:block px-6 py-2.5 bg-white text-background text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-foreground hover:shadow-background/30 transition-all transform hover:-translate-y-0.5"
+                            className="hidden md:block px-6 py-2.5 opacity-0 bg-white text-background text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-foreground hover:shadow-background/30 transition-all transform hover:-translate-y-0.5"
                         >
                             Enroll Now
                         </Link>
