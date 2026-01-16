@@ -26,7 +26,7 @@ export default function KeyFeatures() {
             >
                 {[
                     {
-                        title: "20 Purposeful Rounds",
+                        title: "Leadership Development",
                         icon: <Brain />
                     },
                     {

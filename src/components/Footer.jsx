@@ -85,7 +85,7 @@ const Footer = () => {
                             <li className="flex items-center gap-3">
                                 <Phone className="shrink-0" size={18} style={{ color: '#e3b675' }} />
                                 <a href="tel:+919846123456" className="text-slate-200 hover:text-white transition-colors">
-                                    +91 9846 123 456
+                                    +91 9747 558 313
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
