@@ -31,7 +31,6 @@ const MediaPresence = () => {
         <section 
             ref={sectionRef}
             className="relative py-20 bg-gradient-to-b from-slate-50 via-white to-slate-50 overflow-hidden"
-            id="contact"
         >
             {/* Subtle background pattern */}
             <div className="absolute inset-0 opacity-[0.03]" 

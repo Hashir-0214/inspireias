@@ -47,11 +47,11 @@ const Header = () => {
 
                     {/* Right section */}
                     <a
-                        href="tel:+911234567890"
+                        href="tel:+919747558313"
                         className="flex items-center gap-2 hover:text-white transition-colors"
                     >
                         <Phone size={14} />
-                        +91 9846 123 456
+                        +91 9747 558 313
                     </a>
 
                 </div>
@@ -95,7 +95,7 @@ const Header = () => {
                     <div className="flex items-center gap-4">
                         {/* CTA Button */}
                         <Link
-                            href="#register"
+                            href="#levels"
                             className="hidden md:block px-6 py-2.5 bg-white text-background text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-foreground hover:shadow-background/30 transition-all transform hover:-translate-y-0.5"
                         >
                             Enroll Now
@@ -130,17 +130,20 @@ const Header = () => {
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
-                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-slate-900 z-50 shadow-2xl p-6 flex flex-col justify-between border-l border-white/10"
+                            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+                            className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-background/95 backdrop-blur-xl z-50 shadow-2xl p-6 flex flex-col justify-between border-l border-white/10"
                         >
                             <div>
-                                <div className="flex justify-between items-center mb-10">
-                                    <div>
-                                        <h2 className="text-xl font-bold font-nunito text-white">INSPIRO.</h2>
-                                        <p className="text-xs text-slate-400">School Level Civil Service</p>
+                                <div className="flex justify-between items-center mb-10 pl-2">
+                                    {/* Updated to match desktop logo */}
+                                    <div className="relative h-8 w-32">
+                                        <img src="/logo.png" alt="INSPIRO" className="h-full object-contain object-left" />
                                     </div>
-                                    <button onClick={() => setIsMobileMenuOpen(false)} className="p-2 text-slate-400 hover:text-red-400 transition-colors">
-                                        <X size={24} />
+                                    <button 
+                                        onClick={() => setIsMobileMenuOpen(false)} 
+                                        className="p-2 text-slate-400 hover:text-white transition-colors bg-white/5 rounded-full"
+                                    >
+                                        <X size={20} />
                                     </button>
                                 </div>
 
@@ -150,26 +153,30 @@ const Header = () => {
                                             key={link.name}
                                             href={link.href}
                                             onClick={() => setIsMobileMenuOpen(false)}
-                                            className="text-lg font-medium text-slate-300 py-3 border-b border-white/5 flex justify-between items-center hover:text-blue-400 transition-colors"
+                                            className="group text-lg font-medium text-slate-300 py-4 px-2 border-b border-white/5 flex justify-between items-center hover:text-white hover:bg-white/5 rounded-lg transition-all"
                                         >
                                             {link.name}
-                                            <ChevronRight size={16} className="text-slate-600" />
+                                            <ChevronRight size={16} className="text-slate-600 group-hover:text-white transition-colors" />
                                         </Link>
                                     ))}
                                 </nav>
                             </div>
 
-                            <div className="space-y-4">
+                            <div className="space-y-6 pb-4">
+                                {/* Updated to match desktop button style */}
                                 <Link
-                                    href="#register"
+                                    href="#levels"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block w-full text-center py-3 bg-blue-600 text-white font-medium rounded-xl shadow-lg active:scale-95 transition-transform"
+                                    className="block w-full text-center py-3.5 bg-white text-background font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
                                 >
                                     Enroll Now
                                 </Link>
-                                <div className="text-xs text-slate-500 text-center leading-relaxed">
-                                    OS 3 GCDA Complex, Marine Drive <br />
-                                    Cochin, Ernakulam
+                                <div className="text-xs text-slate-500 text-center leading-relaxed flex flex-col items-center gap-2">
+                                    <span className="flex items-center gap-1.5">
+                                        <MapPin size={12} />
+                                        Marine Drive, Cochin
+                                    </span>
+                                    <span className="opacity-50">© 2024 Inspiro</span>
                                 </div>
                             </div>
                         </motion.div>

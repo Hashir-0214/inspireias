@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import ActivityLearning from "@/components/ActivityBasedLearning";
+import Contact from "@/components/Contact";
 import Courses from "@/components/Courses";
 import Features from "@/components/Features";
 import FeelTheChange from "@/components/FeelTheChange";
@@ -26,6 +27,7 @@ export default function Home() {
       <CenturySkills />
       {/* <Mentors /> */}
       <MediaPresence />
+      <Contact />
     </div>
   );
 }

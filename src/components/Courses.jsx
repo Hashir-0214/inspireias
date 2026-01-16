@@ -150,7 +150,9 @@ const Courses = () => {
 
                                         {/* Action Button */}
                                         <a
-                                            href="#contact"
+                                            href={`https://wa.me/919747558313?text=${encodeURIComponent(`Hi, I would like to enroll for ${course.title} (Level ${course.level}) - ${course.classes}`)}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className={`block w-full text-center py-4 rounded-xl bg-[#6c1329] text-white font-semibold transition-all duration-300 ${course.button} flex justify-center items-center gap-2 group-hover:gap-3 hover:shadow-lg`}
                                         >
                                             Enroll for Level {course.level}
