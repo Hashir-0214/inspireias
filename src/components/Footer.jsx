@@ -90,8 +90,8 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="shrink-0" size={18} style={{ color: '#e3b675' }} />
-                                <a href="mailto:info@inspiroias.com" className="text-slate-200 hover:text-white transition-colors">
-                                    info@inspiroias.com
+                                <a href="mailto:inspiroiasacademy@gmail.com" className="text-slate-200 hover:text-white transition-colors">
+                                    inspiroiasacademy@gmail.com
                                 </a>
                             </li>
                         </ul>

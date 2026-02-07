@@ -51,7 +51,7 @@ const Contact = () => {
         {
             icon: Mail,
             title: "Email Us",
-            details: "admissions@inspiro.com",
+            details: "inspiroiasacademy@gmail.com",
             subDetails: "We respond within 24 hours",
         },
     ];
