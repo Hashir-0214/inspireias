@@ -205,23 +205,56 @@ const CenturySkills = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: 0.6 }}
-                    className="mt-16 bg-gradient-to-r from-[#6c1329] via-[#8b1a36] to-[#6c1329] rounded-2xl p-8 text-center relative overflow-hidden"
+                    className="mt-16 bg-gradient-to-r from-[#6c1329] via-[#8b1a36] to-[#6c1329] rounded-2xl p-10 text-center relative overflow-hidden shadow-2xl border border-[#e3b675]/30 group"
                 >
-                    <div className="absolute top-0 left-0 w-full h-full opacity-10">
-                        <div className="absolute top-4 left-8 text-6xl">🌟</div>
-                        <div className="absolute bottom-4 right-8 text-6xl">🎯</div>
-                        <div className="absolute top-1/2 left-1/4 text-5xl">💡</div>
-                        <div className="absolute top-1/3 right-1/4 text-5xl">🚀</div>
+                    {/* Background Pattern */}
+                    <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-fixed" />
+
+                    {/* Animated Floating Icons */}
+                    <div className="absolute inset-0 pointer-events-none">
+                        <motion.div
+                            animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute top-8 left-8 text-[#e3b675] opacity-20"
+                        >
+                            <Target size={64} />
+                        </motion.div>
+                        <motion.div
+                            animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
+                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                            className="absolute bottom-8 right-8 text-[#e3b675] opacity-20"
+                        >
+                            <Lightbulb size={64} />
+                        </motion.div>
+                        <motion.div
+                            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute top-1/2 left-1/4 text-white opacity-10"
+                        >
+                            <Brain size={80} />
+                        </motion.div>
                     </div>
 
-                    <div className="relative">
-                        <TrendingUp className="w-12 h-12 mx-auto mb-4 text-[#e3b675]" />
-                        <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                            Prepare Today for Tomorrow's World
+                    <div className="relative z-10">
+                        <div className="inline-block p-3 rounded-full bg-white/10 backdrop-blur-sm mb-6 border border-white/20 shadow-lg">
+                            <TrendingUp className="w-8 h-8 text-[#e3b675]" strokeWidth={2.5} />
+                        </div>
+
+                        <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+                            Prepare Today for <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e3b675] to-[#f3d6a0]">
+                                Tomorrow's World
+                            </span>
                         </h3>
-                        <p className="text-white/90 max-w-3xl mx-auto text-lg">
+
+                        <p className="text-white/80 max-w-2xl mx-auto text-lg leading-relaxed font-light mb-8">
                             Equip your child with the skills, mindset, and confidence to navigate change, lead with purpose, and build a future in civil services and beyond.
                         </p>
+
+                        {/* Optional Button for stronger CTA */}
+                        <button className="px-8 py-3 rounded-full bg-white text-[#6c1329] font-bold text-sm uppercase tracking-wider shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                            Join the movement
+                        </button>
                     </div>
                 </motion.div>
 

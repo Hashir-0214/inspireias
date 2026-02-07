@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, MapPin, ChevronRight } from "lucide-react";
+import { Menu, X, Phone, MapPin, ChevronRight, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -30,13 +29,14 @@ const Header = () => {
 
     return (
         <>
-            <div className="relative w-full bg-gray-300 text-xs py-2 hidden md:block border-b border-white/5 z-50">
+            {/* Top Bar - Dark & Subtle */}
+            <div className={`relative w-full z-50 text-[10px] md:text-xs py-2 transition-colors duration-300 hidden md:block border-b border-white/5 bg-[#681028] text-white/70`}>
                 <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
                     {/* Left section */}
                     <div className="flex items-center gap-6">
-                        <span className="flex items-center gap-2">
-                            <MapPin size={14} className="text-blue-500" />
+                        <span className="flex items-center gap-2 hover:text-white transition-colors cursor-default">
+                            <MapPin size={12} className="text-[#d6a45e]" />
                             OS 3 GCDA Complex, Marine Drive, Cochin
                         </span>
 
@@ -46,13 +46,22 @@ const Header = () => {
                     </div>
 
                     {/* Right section */}
-                    <a
-                        href="tel:+919747558313"
-                        className="flex items-center gap-2 hover:text-white transition-colors"
-                    >
-                        <Phone size={14} />
-                        +91 9747 558 313
-                    </a>
+                    <div className="flex items-center gap-6">
+                        <a
+                            href="mailto:info@inspiro.com"
+                            className="flex items-center gap-2 hover:text-white transition-colors"
+                        >
+                            <Mail size={12} className="text-[#d6a45e]" />
+                            info@inspiro.com
+                        </a>
+                        <a
+                            href="tel:+919747558313"
+                            className="flex items-center gap-2 hover:text-white transition-colors font-medium"
+                        >
+                            <Phone size={12} className="text-[#d6a45e]" />
+                            +91 9747 558 313
+                        </a>
+                    </div>
 
                 </div>
             </div>
@@ -60,15 +69,13 @@ const Header = () => {
 
             {/* --- Floating "Pill" Navbar --- */}
             <div
-                className={`fixed left-0 right-0 z-40 flex justify-center transition-all duration-500 ease-in-out ${isScrolled ? "top-2" : "top-6 md:top-20"
+                className={`fixed left-0 right-0 z-40 flex justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isScrolled ? "top-2" : "top-4 md:top-14"
                     }`}
             >
-
-
                 <header
                     className={`relative z-10 w-[95%] max-w-6xl flex items-center justify-between px-6 py-3 transition-all duration-300 rounded-full border ${isScrolled
-                        ? "bg-background backdrop-blur-md shadow-xl border-white/10"
-                        : "bg-background shadow-2xl border-white/10"
+                        ? "bg-[#3a0412]/80 backdrop-blur-xl shadow-lg shadow-black/20 border-white/10"
+                        : "bg-[#3a0412]/40 backdrop-blur-md border-white/5"
                         }`}
                 >
                     {/* Logo Section */}
@@ -85,8 +92,8 @@ const Header = () => {
                                 className="relative text-sm font-medium text-slate-300 hover:text-white transition-colors py-1 group"
                             >
                                 {link.name}
-                                {/* Dot Indicator for Hover */}
-                                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                {/* Gold Underline for Hover */}
+                                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#d6a45e] group-hover:w-full transition-all duration-300 ease-out" />
                             </Link>
                         ))}
                     </nav>
@@ -96,14 +103,14 @@ const Header = () => {
                         {/* CTA Button */}
                         <Link
                             href="#levels"
-                            className="hidden md:block px-6 py-2.5 bg-white text-background text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-foreground hover:shadow-background/30 transition-all transform hover:-translate-y-0.5"
+                            className="hidden md:block px-6 py-2.5 bg-gradient-to-r from-[#d6a45e] to-[#b88642] text-white text-sm font-semibold rounded-full shadow-lg shadow-[#d6a45e]/20 hover:shadow-[#d6a45e]/40 hover:scale-[1.02] transition-all duration-300"
                         >
                             Enroll Now
                         </Link>
 
-                        {/* Mobile Menu Button (White Icon now) */}
+                        {/* Mobile Menu Button */}
                         <button
-                            className="md:hidden text-slate-300 hover:text-white p-1"
+                            className="md:hidden text-slate-200 hover:text-white p-2 hover:bg-white/10 rounded-full transition-colors"
                             onClick={() => setIsMobileMenuOpen(true)}
                         >
                             <Menu size={24} strokeWidth={1.5} />
@@ -131,17 +138,17 @@ const Header = () => {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                            className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-background/95 backdrop-blur-xl z-50 shadow-2xl p-6 flex flex-col justify-between border-l border-white/10"
+                            className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#2a030d] text-white z-50 shadow-2xl p-6 flex flex-col justify-between border-l border-white/10"
                         >
                             <div>
                                 <div className="flex justify-between items-center mb-10 pl-2">
-                                    {/* Updated to match desktop logo */}
-                                    <div className="relative h-8 w-32">
-                                        <img src="/logo.png" alt="INSPIRO" className="h-full object-contain object-left" />
-                                    </div>
-                                    <button 
-                                        onClick={() => setIsMobileMenuOpen(false)} 
-                                        className="p-2 text-slate-400 hover:text-white transition-colors bg-white/5 rounded-full"
+                                    <span className="text-xl font-bold text-white tracking-widest flex items-center gap-1">
+                                        INSPIRO
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#d6a45e] inline-block mb-1"></span>
+                                    </span>
+                                    <button
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="p-2 text-slate-400 hover:text-white transition-colors bg-white/5 rounded-full hover:bg-white/10"
                                     >
                                         <X size={20} />
                                     </button>
@@ -153,30 +160,33 @@ const Header = () => {
                                             key={link.name}
                                             href={link.href}
                                             onClick={() => setIsMobileMenuOpen(false)}
-                                            className="group text-lg font-medium text-slate-300 py-4 px-2 border-b border-white/5 flex justify-between items-center hover:text-white hover:bg-white/5 rounded-lg transition-all"
+                                            className="group text-lg font-light text-slate-200 py-4 px-2 border-b border-white/5 flex justify-between items-center hover:text-[#d6a45e] hover:bg-white/5 rounded-lg transition-all"
                                         >
                                             {link.name}
-                                            <ChevronRight size={16} className="text-slate-600 group-hover:text-white transition-colors" />
+                                            <ChevronRight size={16} className="text-slate-600 group-hover:text-[#d6a45e] transition-colors" />
                                         </Link>
                                     ))}
                                 </nav>
                             </div>
 
                             <div className="space-y-6 pb-4">
-                                {/* Updated to match desktop button style */}
                                 <Link
                                     href="#levels"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block w-full text-center py-3.5 bg-white text-background font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
+                                    className="block w-full text-center py-4 bg-gradient-to-r from-[#d6a45e] to-[#b88642] text-white font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
                                 >
                                     Enroll Now
                                 </Link>
-                                <div className="text-xs text-slate-500 text-center leading-relaxed flex flex-col items-center gap-2">
-                                    <span className="flex items-center gap-1.5">
-                                        <MapPin size={12} />
+                                <div className="text-xs text-slate-500 text-center leading-relaxed flex flex-col items-center gap-3 pt-4 border-t border-white/5">
+                                    <span className="flex items-center gap-2">
+                                        <MapPin size={12} className="text-[#d6a45e]" />
                                         Marine Drive, Cochin
                                     </span>
-                                    <span className="opacity-50">© 2024 Inspiro</span>
+                                    <span className="flex items-center gap-2">
+                                        <Phone size={12} className="text-[#d6a45e]" />
+                                        +91 9747 558 313
+                                    </span>
+                                    <span className="opacity-40 mt-2">© 2024 Inspiro</span>
                                 </div>
                             </div>
                         </motion.div>
