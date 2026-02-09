@@ -174,8 +174,8 @@ const Hero = () => {
                         </motion.div>
 
                         {/* Glow behind student */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] bg-[#7c1430] rounded-full -z-10" />
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] bg-[#3a0412] rounded-full -z-11" />
+                        {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] bg-[#7c1430] rounded-full -z-10" />
+                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] lg:w-[450px] lg:h-[450px] bg-[#3a0412] rounded-full -z-11" /> */}
 
                         {/* Image Container */}
                         <div className="relative w-[320px] h-[380px] lg:w-[500px] lg:h-[650px]">
