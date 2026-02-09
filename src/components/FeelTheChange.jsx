@@ -17,7 +17,7 @@ const FeelTheChange = () => {
     };
 
     return (
-        <section className="max-w-6xl rounded-4xl mx-auto relative py-24 bg-orange-50 overflow-hidden flex items-center justify-center">
+        <section className="max-w-6xl rounded-3xl md:rounded-[2.5rem] mx-auto relative py-12 md:py-24 bg-orange-50 overflow-hidden flex items-center justify-center">
 
             {/* --- Background Doodles (Absolute Positioned) --- */}
             <div className="absolute inset-0 pointer-events-none opacity-10">
@@ -35,12 +35,12 @@ const FeelTheChange = () => {
                     className="max-w-4xl mx-auto"
                 >
                     {/* Badge */}
-                    <span className="inline-block py-1 px-4 rounded-full bg-white border-2 border-orange-200 text-orange-600 font-bold text-xs tracking-widest uppercase mb-6 shadow-sm">
+                    <span className="inline-block py-1 px-4 rounded-full bg-white border-2 border-orange-200 text-orange-600 font-bold text-[10px] md:text-xs tracking-widest uppercase mb-4 md:mb-6 shadow-sm">
                         Our Vision
                     </span>
 
                     {/* Headline */}
-                    <h2 className="text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-8 relative inline-block">
+                    <h2 className="text-4xl md:text-7xl font-black text-slate-900 leading-tight mb-6 md:mb-8 relative inline-block">
                         FEEL THE <br className="md:hidden" />
                         <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-red-900 via-yellow-600 to-orange-600">
                             CHANGE
@@ -52,7 +52,7 @@ const FeelTheChange = () => {
                     </h2>
 
                     {/* The Core Message from PDF [cite: 34-40] */}
-                    <p className="text-lg md:text-2xl font-medium text-slate-700 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-base md:text-2xl font-medium text-slate-700 leading-relaxed max-w-2xl mx-auto">
                         "Through these sessions, we aim to redefine the relationship between
                         <span className="text-blue-600 font-bold mx-1">education</span>
                         and

@@ -65,7 +65,7 @@ const Contact = () => {
             </div>
 
             <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 relative z-10">
-                <div className="bg-[#e3b675] rounded-3xl shadow-2xl p-6 md:p-12 lg:p-16">
+                <div className="bg-[#6c1329] rounded-3xl shadow-2xl p-6 md:p-12 lg:p-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
