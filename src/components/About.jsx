@@ -101,7 +101,7 @@ const About = () => {
                         </span>
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                        Welcome to <span className="text-background">Inspiro IAS Academy</span>
+                        Welcome to <span className="text-[#6c1329]">Inspiro IAS Academy</span>
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-[#6c1329] to-[#e3b675] mx-auto rounded-full mt-4" />
                 </motion.div>
@@ -221,9 +221,9 @@ const About = () => {
                     ].map((stat, index) => (
                         <div
                             key={index}
-                            className="text-center p-6 bg-white rounded-2xl border-2 border-background"
+                            className="text-center p-6 bg-white rounded-2xl border-2 border-[#6c1329]"
                         >
-                            <h3 className="text-4xl font-bold text-background mb-2">{stat.number}</h3>
+                            <h3 className="text-4xl font-bold text-[#6c1329] mb-2">{stat.number}</h3>
                             <p className="text-lg font-semibold text-slate-800">{stat.label}</p>
                             <p className="text-sm text-slate-600 mt-1">{stat.sublabel}</p>
                         </div>

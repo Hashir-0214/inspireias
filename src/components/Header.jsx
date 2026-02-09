@@ -67,8 +67,8 @@ const Header = () => {
 
                 <header
                     className={`relative z-10 w-[95%] max-w-6xl flex items-center justify-between px-6 py-3 transition-all duration-300 rounded-full border ${isScrolled
-                        ? "bg-background backdrop-blur-md shadow-xl border-white/10"
-                        : "bg-background shadow-2xl border-white/10"
+                        ? "bg-[#6c1329] backdrop-blur-md shadow-xl border-white/10"
+                        : "bg-[#6c1329] shadow-2xl border-white/10"
                         }`}
                 >
                     {/* Logo Section */}
@@ -86,7 +86,7 @@ const Header = () => {
                             >
                                 {link.name}
                                 {/* Dot Indicator for Hover */}
-                                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#e3b675] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </Link>
                         ))}
                     </nav>
@@ -96,7 +96,7 @@ const Header = () => {
                         {/* CTA Button */}
                         <Link
                             href="#levels"
-                            className="hidden md:block px-6 py-2.5 bg-white text-background text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-foreground hover:shadow-background/30 transition-all transform hover:-translate-y-0.5"
+                            className="hidden md:block px-6 py-2.5 bg-white text-[#6c1329] text-sm font-semibold rounded-full shadow-lg shadow-blue-900/50 hover:bg-[#e3b675] hover:shadow-[#6c1329]/30 transition-all transform hover:-translate-y-0.5"
                         >
                             Enroll Now
                         </Link>
@@ -131,7 +131,7 @@ const Header = () => {
                             animate={{ x: 0 }}
                             exit={{ x: "100%" }}
                             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                            className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-background/95 backdrop-blur-xl z-50 shadow-2xl p-6 flex flex-col justify-between border-l border-white/10"
+                            className="fixed top-0 right-0 h-full w-[85%] max-w-sm bg-[#6c1329]/95 backdrop-blur-xl z-50 shadow-2xl p-6 flex flex-col justify-between border-l border-white/10"
                         >
                             <div>
                                 <div className="flex justify-between items-center mb-10 pl-2">
@@ -167,7 +167,7 @@ const Header = () => {
                                 <Link
                                     href="#levels"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="block w-full text-center py-3.5 bg-white text-background font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
+                                    className="block w-full text-center py-3.5 bg-white text-[#6c1329] font-bold rounded-xl shadow-lg active:scale-95 transition-transform"
                                 >
                                     Enroll Now
                                 </Link>

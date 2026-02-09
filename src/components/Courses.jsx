@@ -109,7 +109,7 @@ const Courses = () => {
                                         {/* Header: Level & Title */}
                                         <div className="flex items-start justify-between mb-6">
                                             <div>
-                                                <span className={`text-5xl font-bold text-background opacity-50 ${course.text}`}>
+                                                <span className={`text-5xl font-bold text-[#6c1329] opacity-50 ${course.text}`}>
                                                     {course.level}
                                                 </span>
                                                 <h3 className="text-2xl font-bold text-slate-900 -mt-2">

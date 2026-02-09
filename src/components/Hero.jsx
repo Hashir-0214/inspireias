@@ -121,7 +121,7 @@ const Hero = () => {
                         <div className="flex flex-col">
                             <h1 className="text-3xl lg:text-5xl font-sans font-bold uppercase leading-tight">
                                 <AnimatedText text="Junior Level" delayOffset={0} /> <br />
-                                <span className="text-foreground inline-block relative">
+                                <span className="text-[foreground] inline-block relative">
                                     {/* Using CharacterReveal for the main keyword for emphasis */}
                                     <CharacterReveal text="Civil Service" delayOffset={0.5} className="relative z-10" />
                                     {/* Optional: Glow behind the text */}
