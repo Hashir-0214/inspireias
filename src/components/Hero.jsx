@@ -102,7 +102,7 @@ const Hero = () => {
                 <div className="flex flex-col lg:flex-row gap-12">
 
                     {/* -------- Text Column -------- */}
-                    <div className="flex-1 text-white space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:mx-0 pb-32 lg:pb-0">
+                    <div className="flex-1 text-white space-y-8 text-center lg:text-left max-w-2xl mx-auto lg:ml-20 pb-32 lg:pb-0">
                         <motion.div
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
@@ -152,7 +152,7 @@ const Hero = () => {
                 className="
                     absolute bottom-0 left-0 w-full
                     flex justify-center
-                    lg:right-0 lg:left-auto lg:w-auto
+                    lg:right-0 xl:right-20 2xl:right-40 lg:left-auto lg:w-auto
                     pointer-events-none z-10
                 "
             >

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <section className="relative w-full py-40 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+        <section className="relative w-full pt-30 pb-20 lg:py-40 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
             <style jsx>{`
                 @keyframes float {
                     0%, 100% {
@@ -55,31 +55,31 @@ const About = () => {
             <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-cyan-100/30 rounded-full blur-[100px]" />
 
             {/* Floating Educational Elements - Right Side */}
-            <div className="absolute right-8 top-20 animate-float">
+            <div className="hidden lg:block absolute right-8 top-20 animate-float">
                 <div className="text-6xl transform rotate-12 hover:rotate-45 transition-transform duration-500">
                     ✏️
                 </div>
             </div>
 
-            <div className="absolute right-16 top-[40%] animate-float-delayed">
+            <div className="hidden lg:block absolute right-16 top-[40%] animate-float-delayed">
                 <div className="text-5xl transform -rotate-12 hover:rotate-12 transition-transform duration-500">
                     📚
                 </div>
             </div>
 
-            <div className="absolute right-4 bottom-32 animate-float-slow">
+            <div className="hidden lg:block absolute right-4 bottom-32 animate-float-slow">
                 <div className="text-5xl transform rotate-6 hover:-rotate-12 transition-transform duration-500">
                     🎓
                 </div>
             </div>
 
-            <div className="absolute right-20 bottom-[15%] animate-float">
+            <div className="hidden lg:block absolute right-20 bottom-[15%] animate-float">
                 <div className="text-4xl transform -rotate-6 hover:rotate-6 transition-transform duration-500">
                     📝
                 </div>
             </div>
 
-            <div className="absolute right-32 top-[60%] animate-float-delayed">
+            <div className="hidden lg:block absolute right-32 top-[60%] animate-float-delayed">
                 <div className="text-3xl transform rotate-12 hover:-rotate-12 transition-transform duration-500">
                     ⭐
                 </div>
@@ -131,7 +131,7 @@ const About = () => {
                         </div>
 
                         {/* Feature Highlights */}
-                        <div className="grid grid-cols-2 gap-4 mt-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                             {[
                                 { icon: Award, label: "Excellence Focused", color: "text-red-600" },
                                 { icon: Target, label: "Goal Oriented", color: "text-red-600" },

@@ -124,7 +124,7 @@ const ActivityLearning = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.7 }}
-                        className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                        className="grid grid-cols-2 gap-6"
                     >
                         {features.map((feature, index) => (
                             <motion.div
@@ -163,7 +163,7 @@ const ActivityLearning = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
-                            className="sm:col-span-2 bg-gradient-to-br from-[#6c1329] to-[#8b1a36] rounded-xl p-6 text-white relative overflow-hidden"
+                            className="col-span-2 bg-gradient-to-br from-[#6c1329] to-[#8b1a36] rounded-xl p-6 text-white relative overflow-hidden"
                         >
                             <div className="absolute top-0 right-0 w-32 h-32 bg-[#e3b675]/20 rounded-full blur-3xl" />
                             <div className="relative">
@@ -186,7 +186,7 @@ const ActivityLearning = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: 0.5 }}
-                    className="mt-16 flex flex-wrap justify-center items-center gap-8"
+                    className="mt-16 flex flex-wrap justify-center items-center gap-4 md:gap-8"
                 >
                     {[
                         { icon: "🎯", text: "Hands-On Tasks" },
